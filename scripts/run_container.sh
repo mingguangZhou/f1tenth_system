@@ -13,9 +13,9 @@ sudo ln -sf /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0 /usr/lib/aarch64-linux-gn
 sudo ln -sf /usr/lib/aarch64-linux-gnu/libffi.so.8.1.0 /usr/lib/aarch64-linux-gnu/libffi.so.8
 
 # Start the container with a permanent name and make necessary fixes
-sudo docker run --runtime nvidia -it --privileged --network host -e DISPLAY=$DISPLAY \
-    -e ROS_DOMAIN_ID=0 \
+sudo docker run --runtime nvidia -it --privileged --network host -e DISPLAY=1 \
     -v /tmp/.X11-unix/:/tmp/.X11-unix -v /dev:/dev \
     --mount type=volume,dst=/f1tenth_ws,volume-driver=local,volume-opt=type=none,volume-opt=o=bind,volume-opt=device=$HOME/f1tenth_ws \
     --name f1tenth_onboard \
     f1tenth/focal-l4t-foxy:f1tenth-stack
+
