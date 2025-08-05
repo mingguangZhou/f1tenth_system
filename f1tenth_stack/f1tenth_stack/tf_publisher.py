@@ -18,7 +18,7 @@ class FramePublisher(Node):
         t.child_frame_id = 'laser'
         t.transform.translation.x = 0.27
         t.transform.translation.y = 0.0
-        t.transform.translation.z = 0.11
+        t.transform.translation.z = 0.0
         t.transform.rotation.x = 0.0
         t.transform.rotation.y = 0.0
         t.transform.rotation.z = 0.0
