@@ -1,12 +1,12 @@
 [submodule "vesc"]
 	path = vesc
-	url = https://github.com/f1tenth/vesc.git
-	branch = ros2
+	url = https://github.com/mingguangZhou/vesc.git
+	branch = outra00-onboard
 [submodule "ackermann_mux"]
 	path = ackermann_mux
-	url = https://github.com/f1tenth/ackermann_mux.git
-	branch = foxy-devel
+	url = https://github.com/mingguangZhou/ackermann_mux.git
+	branch = outra00-onboard
 [submodule "teleop_tools"]
 	path = teleop_tools
-	url = https://github.com/f1tenth/teleop_tools.git
-	branch = foxy-devel
+	url = https://github.com/mingguangZhou/teleop_tools.git
+	branch = outra00-onboard
