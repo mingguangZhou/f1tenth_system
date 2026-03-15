@@ -22,6 +22,7 @@
     position_max: 0.0
     servo_min: 0.192
     servo_max: 0.85
+    publish_tf: true
 
 # No longer needed, all parameters are shared
 # ackermann_to_vesc_node:
