@@ -119,6 +119,12 @@ def generate_launch_description():
         parameters=[LaunchConfiguration('joy_config')]
     )
 
+    drive_mode_manager_node = Node(
+        package='f1tenth_stack',
+        executable='drive_mode_manager',
+        name='drive_mode_manager'
+    )
+
     ackermann_to_vesc_node = Node(
         package='vesc_ackermann',
         executable='ackermann_to_vesc_node',
@@ -166,6 +172,7 @@ def generate_launch_description():
 
     ld.add_action(joy_node)
     ld.add_action(joy_teleop_node)
+    ld.add_action(drive_mode_manager_node)
     ld.add_action(ackermann_to_vesc_node)
     ld.add_action(vesc_to_odom_setup)
     ld.add_action(vesc_driver_node)

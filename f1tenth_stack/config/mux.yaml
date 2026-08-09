@@ -9,3 +9,8 @@ ackermann_mux:
         topic   : teleop
         timeout : 0.2
         priority: 100
+    locks:
+      auto_disabled:
+        topic   : auto_drive_disabled
+        timeout : 0.3
+        priority: 50
