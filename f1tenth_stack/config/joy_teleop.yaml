@@ -10,7 +10,11 @@ joy_teleop:
     default:
       type: topic
       interface_type: ackermann_msgs/msg/AckermannDriveStamped
-      topic_name: teleop
+      # Keep the default zero command away from /teleop so it does not
+      # continuously mask autonomous /drive in ackermann_mux.
+      # Stopping while auto is disabled is now handled explicitly by
+      # drive_mode_manager.
+      topic_name: teleop_idle
       axis_mappings:
         drive-speed:
           axis: 1
@@ -29,7 +33,9 @@ joy_teleop:
       axis_mappings:
         drive-speed:
           axis: 1
-          scale: 4.0
+          # 50% slower manual speed command. Button/axis positions and
+          # vehicle calibration are unchanged.
+          scale: 2.0
           offset: 0.0
         drive-steering_angle:
           axis: 3
